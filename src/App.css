@@ -1,38 +1,132 @@
-.App {
+h1 {font-size: 76px;}
+h6, .normal {font-size: 26px;}
+
+.container {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 745px;
+  /* min-height: 1000px; */
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 6px 15px 0px rgba(207, 211, 218, 0.35);
+  background: #fff;
+  padding: 122px 105px;
+}
+
+.card__title, .card__title-date, ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.card__title-dateYear {margin-left: 15px;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ul {margin: 110px 0;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul li {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 67px;  
+}
+
+ul li p.active {color: #bdc0ca;}
+ul li img, .remove {cursor: pointer;}
+
+.remove {
+  color: #f00;
+  font-size: 82px;
+  margin-left: 1.5rem;
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 67px;
+  margin-top: -30px;
+}
+
+.form input {
+  font-size: 26px;
+  padding: 5px 8px;
+  border: 1px solid #bdc0ca;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 70%;
+}
+
+.form button {
+  font-size: 26px;
+  padding: 5px 8px;
+  border: 1px solid #3e434f;
+  border-radius: 5px;
+  width: 25%;
+  margin-left: 3%;
+  color: #fff;
+  background: #3e434f;
+  cursor: pointer;
+}
+
+.fab {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fab div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  margin-bottom: -240px;
+  width: 182px;
+  height: 182px;
+  background: #50e3a4;
+  color: #46be8b;
+  border-radius: 50%;
+  font-size: 100px;
+  box-shadow: 0px 3px 10px 0px rgba(62, 192, 136, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 991px) {
+  .form input {width: 55%;}
+  .form button {width: 35%;}
+
+  .card {padding: 2rem;}
+
+  .fab div {
+    margin-bottom: -5.9rem;
+    width: 8rem;
+    height: 8rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 767px) {
+  .form input {
+    display: block;
+    margin: 1rem auto!important;
+    width: 90%;
+  }
+
+  .form button {
+    display: block;
+    margin: 1rem auto!important;
+    width: 95%;
+  }
+
+  .fab div {
+    margin-bottom: -4.5rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 50px;
   }
 }
