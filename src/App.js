@@ -42,7 +42,7 @@ function App() {
         if (todo.id === id) {
           todo.check = !todo.check
         }
-        return todo
+        return todo;
       })
     )
   }  
@@ -67,13 +67,13 @@ function App() {
         title,        
         check: false
       }
-    ]))
+    ]));
     text.current.value = '';
     setOpen(!open);
   }
 
   const removeTodo = id => {
-    setTodos(todos.filter(todo => todo.id !== id))
+    setTodos(todos.filter(todo => todo.id !== id));
   }
 
   const updateOpen = () => {
